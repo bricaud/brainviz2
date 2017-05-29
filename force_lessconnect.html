@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brain network</title>
+    <script type="text/javascript" src="d3/d3.min.js"></script>
+    <script type="text/javascript" src="d3/d3.geom.min.js"></script>
+    <script type="text/javascript" src="d3/d3.layout.min.js"></script>    
+    <link rel="icon" href="http://www.eviacybernetics.com/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="force.css"/>    
+    <link rel="stylesheet" href="http://www.eviacybernetics.com/css/style1.css" type="text/css">
+  </head>
+  <body>
+    <div class="top"><a id="intro"></a>
+      <h1 class="title"><img style="vertical-align: bottom;" src="http://www.eviacybernetics.com/Evialogo.png"/>
+      <div id="title"><span style="color:#7a6666;">Evia</span> Cybernetics</div></h1>
+    </div>
+    <nav>
+      <ul>
+        <li class="menu"><a class="smooth" href="http://www.eviacybernetics.com">Back to Evia</a></li>
+        <li class="menu"><a class="smooth" href="index.html">Brain main page</a></li>
+        <li class="menu"><a class="smooth" href="force2.html">Sticky nodes</a></li>
+        <li class="menu"><a class="smooth" href="force_lessconnect.html">Light brain graph</a></li>
+        <li class="menu"><a class="smooth" href="force_mediumconnect.html">Intermed. graph</a></li>
+      </ul>
+    </nav>
+  <div>
+    <H1> A graph of the brain using diffusion MRI data - with only the most frequent connections</H1>
+   
+    <p class="text">One can drag nodes inside the application and see the recombination of the graph. In addition, putting the mouse over a node will highlight its connections. The initial graph with the full connectivity is <a href="index.html">here</a>. A variant of this graph were nodes can have fixed positions is available on <a href="force2.html">this page</a>. A page with a <a href="force_mediumconnect.html">average number of connections</a>.
+    </p>
+    <h2>Small number of connections (at least 400/477 patients have the connection)</h2>
+    <div>
+    <div id="chart"></div>
+    <script type="text/javascript" src="force_lessconnect.js"></script>
+    </div>
+    <p class="text">The locations of the regions on the brain are given in the following image. The color code is different. The additional regions not represented in the image corresponds to the inner brain region (subcortical, light green and light brown on the graph) and the brainstem (in pink on the graph).</p>
+  <img src="DesikanKilliany.jpg" width="100%"></img>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+
+circle.node {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+line.link {
+ /* stroke: #999; */
+  stroke-opacity: .9;
+  stroke-width: 50;
+}
+
+text.node {
+  fill: #999;
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+circle.node.fixed {
+  fill: #f00;
+}

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brain network</title>
+    <script type="text/javascript" src="d3/d3.min.js"></script>
+    <script type="text/javascript" src="d3/d3.geom.min.js"></script>
+    <script type="text/javascript" src="d3/d3.layout.min.js"></script>  
+    <link rel="icon" href="http://www.eviacybernetics.com/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="force.css"/>
+    <link rel="stylesheet" href="http://www.eviacybernetics.com/css/style1.css" type="text/css">
+  </head>
+  <body>
+    <div class="top"><a id="intro"></a>
+      <!--<h1 class="title"><img style="vertical-align: bottom;" src="http://www.eviacybernetics.com/Evialogo.png"/>
+      <div id="title"><span style="color:#7a6666;">Evia</span> Cybernetics</div></h1>-->
+    </div>
+    <nav>
+      <ul>
+        <li class="menu"><a class="smooth" href="http://www.eviacybernetics.com"><img src="http://www.eviacybernetics.com/images/Eviacybernetics.png" width="100px"/></a></li>
+        <li class="menu"><a class="smooth" href="index.html">Brain main page</a></li>
+        <li class="menu"><a class="smooth" href="force2.html">Sticky nodes</a></li>
+        <li class="menu"><a class="smooth" href="force_lessconnect.html">Light version</a></li>
+        <li class="menu"><a class="smooth" href="force_mediumconnect.html">Intermed. graph</a></li>
+      </ul>
+    </nav>
+  <div>
+    <H1> A graph of the brain using diffusion MRI data</H1>
+    <h2>Introduction</h2>
+    <p class="text">This is an example of a visualization of a network of connections. It demonstrates some of the advantages of an interactive visualization for complex data over a simple image. You will notice on the figure that indeed the regions of the brain are very well connected to each other. Although interesting, it can be difficult for a non-expert to find information on this graph. Among the interesting thing to notice:</p>
+    <ul style="text-align: left;font-size: 16px;">
+      <li>regions within the hemispheres are more connected than the ones across hemispheres,</li>
+      <li>the subcortical regions seem to be important providers of connections across hemispheres,</li>
+      <li>the is no region that connect to all the other ones,</li> 
+      <li>the Insula is connected to all the regions of its hemisphere,</li>
+    </ul>
+    <p class="text">The size of the nodes is related to the degree (number of connections). The reader can immediately spot the central regions, connected to many parts of the brain.</p>
+    <p class="text"> Additional links are provided in the following, to filtered data, with less links. Pattern can be more easily spotted.</p>
+    <h2>Context</h2>
+    <p class="text">The diffusion MRI technique is a mean to probe the quantity of neuronal fibers between different regions of the brain. These fibers, located in the white matter, are bundles of thousands of axions and are the "communication highways" between brain regions. 
+    </p>
+    <p class="text">In the following figure, each node is a brain region of the <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation">Desikan-Killiany Atlas</a>. Each vertex illustrates the connection between two brain regions. The node haven't been placed according to their spatial coordinates on the brain. They are free to move, providing they follow some physical rules given by the force layout.
+    </p>
+    <h2>Data</h2>
+    <p class="text">
+    We analyse here the brain connections provided on the website: <a href="http://pitgroup.org/connectome/">http://pitgroup.org/connectome/</a>.
+    It is based on the following work: <br>
+    Balázs Szalkai, Csaba Kerepesi, Bálint Varga, Vince Grolmusz, The Budapest Reference Connectome Server v2.0, Neuroscience Letters, Vol. 595 (2015), Pages 60-62, <a href="http://dx.doi.org/10.1016/j.neulet.2015.03.071">http://dx.doi.org/10.1016/j.neulet.2015.03.071</a>. <br>
+    Balázs Szalkai, Csaba Kerepesi, Bálint Varga, Vince Grolmusz, Parameterizable Consensus Connectomes from the Human Connectome Project: The Budapest Reference Connectome Server v3.0, , Cognitive Neurodynamics, (2016), <a href="http://dx.doi.org/10.1007/s11571-016-9407-z">http://dx.doi.org/10.1007/s11571-016-9407-z</a>.
+    </p>
+    <p class="text">
+      In their work the authors unified the connectomes of 477 people (computed from MRI datasets of the Human Connectome Project) into a reference brain graph.
+    </p>
+    <h2>Visualization</h2>
+    <p class="text">One can drag nodes inside the application and see the recombination of the graph. In addition, putting the mouse over a node will highlight its connections. A variant of this graph were nodes can have fixed positions is available on <a href="force2.html">this page</a>. Versions of the graph with less connections are given <a href="force_lessconnect.html">here</a>: 2 regions are connected if at least 400 over the 477 patients have these regions connected and <a href="force_mediumconnect.html">here</a>: 2 regions are connected if at least 200 over the 477 patients have these regions connected.
+    </p>
+    <h2>Full graph: 2 regions are connected if at least 2/477 patients have these regions connected</h2>
+    <div>
+    <div id="chart"></div>
+    <script type="text/javascript" src="force.js"></script>
+    </div>
+    <p class="text"> 
+     Color code: <font color="#1f77b4">Right hemisphere</font> <font color=" #aec7e8">Left hemisphere</font>  <font color="#ff7f0e">Brain stem</font>. The orange circled nodes belongs to the subcortical area (or the brain stem) the rest is in the cortex.
+    </p>
+    <p class="text">The locations of the regions on the brain are given in the following image. The color code is different. The additional regions not represented in the image corresponds to the inner brain region (subcortical) and the brainstem.</p>
+  <img src="DesikanKilliany.jpg" width="100%"></img>
+  </div>
+  </body>
+</html>

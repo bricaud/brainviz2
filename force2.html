@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brain network</title>
+    <script type="text/javascript" src="d3/d3.min.js"></script>
+    <script type="text/javascript" src="d3/d3.geom.min.js"></script>
+    <script type="text/javascript" src="d3/d3.layout.min.js"></script>    
+    <script src="http://d3js.org/d3.v3.min.js"></script>    
+    <link rel="icon" href="http://www.eviacybernetics.com/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="force.css"/>    
+    <link rel="stylesheet" href="http://www.eviacybernetics.com/css/style1.css" type="text/css">
+  </head>
+  <body>
+    <div class="top"><a id="intro"></a>
+      <h1 class="title"><img style="vertical-align: bottom;" src="http://www.eviacybernetics.com/Evialogo.png"/>
+      <div id="title"><span style="color:#7a6666;">Evia</span> Cybernetics</div></h1>
+    </div>
+    <nav>
+      <ul>
+        <li class="menu"><a class="smooth" href="http://www.eviacybernetics.com">Back to Evia</a></li>
+        <li class="menu"><a class="smooth" href="index.html">Brain main page</a></li>
+        <li class="menu"><a class="smooth" href="force2.html">Sticky nodes</a></li>
+        <li class="menu"><a class="smooth" href="force_lessconnect.html">Light brain graph</a></li>
+        <li class="menu"><a class="smooth" href="force_mediumconnect.html">Intermed. graph</a></li>
+      </ul>
+    </nav>
+  <div>
+    <H1> A graph of the brain using diffusion MRI data - sticky nodes version</H1>
+    <p class="text">One can drag nodes inside the application and see the recombination of the graph. The action of dragging a node will stick it on the page. Double click on the node to release it. The initial graph is <a href="index.html">here</a>.
+    </p>
+    <div>
+      <div id="chart"></div>
+      <script type="text/javascript" src="force2.js"></script>
+    </div>
+    <p class="text"> 
+     Color code: <font color="#1f77b4">Right hemisphere</font>, <font color=" #aec7e8">Left hemisphere</font>,  <font color="#ff7f0e">Brain stem</font>.
+    </p>
+    <p class="text">The locations of the regions on the brain are given in the following image. The color code is different. The additional regions not represented in the image corresponds to the inner brain region (subcortical) and the brainstem.
+    </p>
+  <img src="DesikanKilliany.jpg" width="100%"></img>
+  </div>
+  </body>
+</html>
