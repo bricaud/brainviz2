@@ -5,7 +5,7 @@ The visualization is done with D3.js.
 
 The data is public and coming from  http://pitgroup.org/connectome/ .
 
-You can see it as a demo on the (http://brain.eviacybernetics.com/budapest/index.html)[Evia Cybernetics page].
+You can see it as a demo on the [Evia Cybernetics page](http://brain.eviacybernetics.com/budapest/index.html).
 
 You can run it yourself. You need to run a web server (easy with Python):
 ```
